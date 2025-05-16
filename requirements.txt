@@ -1,0 +1,10 @@
+numpy
+pandas
+scipy
+librosa
+soundfile
+pyopencl
+tensorflow
+scikit-learn
+psutil
+tqdm
