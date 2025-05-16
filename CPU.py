@@ -179,14 +179,6 @@ if __name__ == "__main__":
     generate_and_save_spectrograms_parallel(test_df, "test")
 
 
-import os
-import time
-import psutil
-import numpy as np
-import tensorflow as tf
-import glob
-from sklearn.metrics import classification_report
-
 def load_data(folder):
     x, y = [], []
     for path in sorted(glob.glob(os.path.join(folder, "*.npy"))):
