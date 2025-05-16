@@ -9,7 +9,7 @@ Bird calls classification isin wildlife monitoring and conservation. However, tr
 ├── `CPU.py` # Spectrogram generation and CNN training on CPU \
 ├── `GPU.py` # Spectrogram generation and CNN training on GPU\
 ├── `README.md` \
-├── `Requirements.txt`
+├── `requirements.txt`
 
 ## Environment Setup
 Clone the repository
