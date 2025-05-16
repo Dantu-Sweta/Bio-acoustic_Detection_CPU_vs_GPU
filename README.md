@@ -37,7 +37,7 @@ The project requires Python 3.9+ and was tested on Apple Silicon (M4) with unifi
 ## Running the code
 
 If you are running `CPU.py`, make sure to execute it directly from the terminal, not through an IDE such as VS Code, PyCharm, or JupyterLab. \
-These environments may automatically detect and assign available GPUs for TensorFlow execution, even when the script is configured to run on CPU. \
+These environments may automatically detect and assign available GPUs for TensorFlow execution, even when the script is configured to run on CPU. 
 
 This will result in an error due to conflicting device visibility settings in the script:
 
