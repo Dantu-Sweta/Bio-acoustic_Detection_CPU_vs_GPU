@@ -14,26 +14,51 @@ Bird calls classification isin wildlife monitoring and conservation. However, tr
 ## Environment Setup
 Clone the repository
 
-`git clone https://github.com/your-username/Bio-acoustic_Detection_CPU_vs_GPU.git`
-`cd Bio-acoustic_Detection_CPU_vs_GPU` 
+```
+git clone https://github.com/your-username/Bio-acoustic_Detection_CPU_vs_GPU.git
+cd Bio-acoustic_Detection_CPU_vs_GPU 
+```
 
 Create a virtual environment
 
-`python3 -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate`
+```
+python3 -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+```
 
 Install dependencies
 
-`pip install -r requirements.txt`
-💡 The project requires Python 3.9+ and was tested on Apple Silicon (M4) with unified memory.
+```
+pip install -r requirements.txt
+```
 
+The project requires Python 3.9+ and was tested on Apple Silicon (M4) with unified memory.
+
+## Running the code
+
+If you are running `CPU.py`, make sure to execute it directly from the terminal, not through an IDE such as VS Code, PyCharm, or JupyterLab. \
+These environments may automatically detect and assign available GPUs for TensorFlow execution, even when the script is configured to run on CPU. \
+
+This will result in an error due to conflicting device visibility settings in the script:
+
+```
+tf.config.set_visible_devices([], 'GPU')
+```
+
+To avoid this, always run CPU.py using a terminal command like:
+
+```
+python CPU.py
+```
 
 ## Dataset
+NOTE: The dataset used in this project was provided by **Dr. Luke Macaulay** for academic research purposes and is not publicly accessible. Due to privacy and institutional restrictions, we cannot share the raw audio or annotations.
+
 Northern Bob White calls \
 Size: ~1.6GB \
 Samples: 1394 labeled NOBO calls
 
-### Preprocessing
+## Preprocessing
 Typically a bird call is about 1 second. To capture the surrounding noise as well 3 second calls have been considered.  
 
 We start by reading WAV files and their corresponding annotation text files. For each audio file. A 3-second clip is extracted and using an overlapping window it is labelled as 1 or 0 based on whether they overlap with a NOBO call or not.
@@ -55,5 +80,3 @@ After training the code was run both in CPU and GPU and the following metrics we
 3. Latency
 4. Memory usage
 
-
-NOTE: The data belongs to the so and so lab at University of Maryland, College Park and hence cannot be publicly shared.
