@@ -18,11 +18,7 @@ from multiprocessing import Pool
 from sklearn.model_selection import train_test_split
 from tqdm import tqdm
 
-
-
-base_path = '/Users/yashwanth/Library/CloudStorage/GoogleDrive-ypinnapu@umd.edu/Shared drives/Audiomoth/data/Selection Tables'
-folder_name = 'Summer Calls/2022 - Revising for Bob white annotation together/'
-relative_folder_path = os.path.join(base_path, folder_name)
+relative_folder_path = "Your_Path"
 
 folder = glob.glob(os.path.join(relative_folder_path, "**", "*"), recursive=True)
 audio_files, selection_files = [], []
