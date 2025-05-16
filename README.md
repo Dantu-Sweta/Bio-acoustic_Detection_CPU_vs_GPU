@@ -11,6 +11,22 @@ Bird calls classification isin wildlife monitoring and conservation. However, tr
 ├── `README.md` \
 ├── `Requirements.txt`
 
+## Environment Setup
+Clone the repository
+
+`git clone https://github.com/your-username/Bio-acoustic_Detection_CPU_vs_GPU.git`
+`cd Bio-acoustic_Detection_CPU_vs_GPU` 
+
+Create a virtual environment
+
+`python3 -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate`
+
+Install dependencies
+
+`pip install -r requirements.txt`
+💡 The project requires Python 3.9+ and was tested on Apple Silicon (M4) with unified memory.
+
 
 ## Dataset
 Northern Bob White calls \
